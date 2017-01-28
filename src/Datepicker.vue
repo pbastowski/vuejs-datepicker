@@ -305,7 +305,7 @@ export default {
 
     setDate (timestamp) {
       this.selectedDate = new Date(timestamp)
-      this.currDate = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), 1).getTime()
+      this.currDate = new Date(this.selectedDate.getFullYear(), this.selectedDate.getMonth(), 1, this.value.getHours(), this.value.getMinutes(), this.value.getSeconds()).getTime()
       this.$emit('selected', new Date(timestamp))
       this.$emit('input', new Date(timestamp))
     },
@@ -676,7 +676,7 @@ export default {
         return
       }
       this.selectedDate = date
-      this.currDate = new Date(date.getFullYear(), date.getMonth(), 1).getTime()
+      this.currDate = new Date(date.getFullYear(), date.getMonth(), 1, this.value.getHours(), this.value.getMinutes(), this.value.getSeconds()).getTime()
     },
 
     init () {
