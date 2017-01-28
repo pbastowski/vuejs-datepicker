@@ -3,5 +3,6 @@ node_modules
 npm-debug.log
 .coveralls.yml
 test/coverage/*
-dist/build.js
-dist/build.js.map
+#dist/build.js
+#dist/build.js.map
+.idea/

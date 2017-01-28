@@ -671,7 +671,7 @@ export default {
       }
       if (!date) {
         const d = new Date()
-        this.currDate = new Date(d.getFullYear(), d.getMonth(), 1).getTime()
+        this.currDate = new Date(d.getFullYear(), d.getMonth(), 1, this.value.getHours(), this.value.getMinutes(), this.value.getSeconds()).getTime()
         this.selectedDate = null
         return
       }
